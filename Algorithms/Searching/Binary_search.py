@@ -21,7 +21,7 @@ def binary_search(arr, target_val):
     if arr[mid] == target_val:
       return mid
 
-    elif arr[mid] < target_val:
+    if arr[mid] < target_val:
       left = mid + 1
       
     else:
