@@ -22,6 +22,7 @@ This repository is designed to be a learning resource for anyone interested in i
 
 ```bash
 git clone [https://github.com/](https://github.com/)<your-username>/data-structures-and-algorithms-python.git
+```
 
 **Contributing**
 We welcome contributions to this repository! If you'd like to add new data structures, algorithms, or improve existing implementations, please feel free to submit a pull request.
