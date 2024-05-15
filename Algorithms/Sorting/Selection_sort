@@ -1,0 +1,14 @@
+# selection sort algorithm finds the lowest value in array in an iteration and moves the value to left side of the array
+# It will iterate all the way upto last index each time starting from previous index starting plus one index
+
+my_array = [64, 34, 25, 5, 22, 11, 90, 12]
+
+n = len(my_array)
+for i in range(n):
+  min_index = i
+  for j in range(i+1, n):
+    if my_array[min_index] > my_array[j]:
+      min_index = j
+  my_array[i], my_array[min_index] = my_array[min_index], my_array[i]
+
+print(f"Sorted Array:, {my_array}")
