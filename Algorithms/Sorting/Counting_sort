@@ -1,0 +1,31 @@
+# Sorting the array by counting the number of times each value occures.
+# Counting Sort is fast when the range of possible values is smaller than the number of values.
+# Conditions for counting sort: values must be integers, non-negative and limited in range.
+
+def counting_sort(arr):
+  """Sorting the array by counting the values in each index
+
+  Args:
+    arr: The sorted array to search
+
+  Returns:
+    The sorted array
+  """
+
+  max_val = max(arr)
+  count = [0] * (max_val + 1)  #creating array with zero
+
+  while len(arr) > 0:
+    num = arr.pop(0)
+    count[num] += 1
+
+  for i in range(len(count)):
+    while count[i] > 0:
+      arr.append(i)
+      count[i] -= 1
+
+  return arr
+
+unsorted_arr = [4, 2, 2, 6, 3, 3, 1, 6, 5, 2, 3]
+sorted_arr = counting_sort(unsorted_arr)
+print("Sorted array:", sorted_arr)
